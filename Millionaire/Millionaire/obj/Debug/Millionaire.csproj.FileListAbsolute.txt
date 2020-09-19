@@ -1,0 +1,10 @@
+C:\Users\shylo\Documents\GitHub\Millionaire-Game\Millionaire\Millionaire\bin\Debug\Millionaire.exe.config
+C:\Users\shylo\Documents\GitHub\Millionaire-Game\Millionaire\Millionaire\bin\Debug\Millionaire.exe
+C:\Users\shylo\Documents\GitHub\Millionaire-Game\Millionaire\Millionaire\bin\Debug\Millionaire.pdb
+C:\Users\shylo\Documents\GitHub\Millionaire-Game\Millionaire\Millionaire\obj\Debug\Millionaire.csprojAssemblyReference.cache
+C:\Users\shylo\Documents\GitHub\Millionaire-Game\Millionaire\Millionaire\obj\Debug\Millionaire.MainWindow.resources
+C:\Users\shylo\Documents\GitHub\Millionaire-Game\Millionaire\Millionaire\obj\Debug\Millionaire.Properties.Resources.resources
+C:\Users\shylo\Documents\GitHub\Millionaire-Game\Millionaire\Millionaire\obj\Debug\Millionaire.csproj.GenerateResource.cache
+C:\Users\shylo\Documents\GitHub\Millionaire-Game\Millionaire\Millionaire\obj\Debug\Millionaire.csproj.CoreCompileInputs.cache
+C:\Users\shylo\Documents\GitHub\Millionaire-Game\Millionaire\Millionaire\obj\Debug\Millionaire.exe
+C:\Users\shylo\Documents\GitHub\Millionaire-Game\Millionaire\Millionaire\obj\Debug\Millionaire.pdb
