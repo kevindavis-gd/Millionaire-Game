@@ -92,5 +92,23 @@
   <ItemGroup>
     <None Include="Resources\Inner Background1.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MoneyChartSmall1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Classic5050.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\50 50 used.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ClassicPAFused.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phone a friend used.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\walk away.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

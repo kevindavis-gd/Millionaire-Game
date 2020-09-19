@@ -63,6 +63,16 @@ namespace Millionaire.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _50_50_used {
+            get {
+                object obj = ResourceManager.GetObject("50 50 used", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Inner_Background {
             get {
                 object obj = ResourceManager.GetObject("Inner Background", resourceCulture);
@@ -83,9 +93,9 @@ namespace Millionaire.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Main_Window_Background {
+        internal static System.Drawing.Bitmap Main_Window_Background1 {
             get {
-                object obj = ResourceManager.GetObject("Main Window Background", resourceCulture);
+                object obj = ResourceManager.GetObject("Main Window Background1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +103,29 @@ namespace Millionaire.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Main_Window_Background1 {
+        internal static System.Drawing.Bitmap MoneyChartSmall {
             get {
-                object obj = ResourceManager.GetObject("Main Window Background1", resourceCulture);
+                object obj = ResourceManager.GetObject("MoneyChartSmall", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap phone_a_friend_used {
+            get {
+                object obj = ResourceManager.GetObject("phone a friend used", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap walk_away {
+            get {
+                object obj = ResourceManager.GetObject("walk away", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
