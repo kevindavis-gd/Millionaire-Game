@@ -14,6 +14,30 @@ namespace Millionaire
 {
     public partial class MainWindow : Form
     {
+        int level;
+        Storage ques;
+        bool gameRunning;
+
+
+        public int get_level()
+        {
+            return level;
+        }
+        public void set_level(int x)
+        {
+            level = x;
+        }
+
+        public bool get_isRunning()
+        {
+            return gameRunning;
+        }
+        public void set_isRunning(bool x)
+        {
+            gameRunning = x;
+        }
+
+
         public MainWindow()
         {
             InitializeComponent();
@@ -21,42 +45,83 @@ namespace Millionaire
 
         private void MainWindow_Load(object sender, EventArgs e)
         {
-           
         }
         //when the play button is clicked
-        private void pictureBox5_Click(object sender, EventArgs e)
+        private void pictureBoxPlay_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Get ready to select question file");
-            OpenFileDialog fileChooser = new OpenFileDialog();
+            GameLoop loop = new GameLoop(this);
+            loop.Run();
 
-            fileChooser.Filter = "Text |* .txt";
-            //if OK is clicked
-            if (fileChooser.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-            {
-                //Show conformation message with only file name
-                MessageBox.Show(fileChooser.SafeFileName);
-                //Streamer points to the full path of the file
-                StreamReader file = new StreamReader(fileChooser.FileName);
+        }
+        private void pictureBoxExit_Click(object sender, EventArgs e)
+        {
+            GameExit();
+        }
 
-                labelQuestion.Text = file.ReadLine();
-                labelA.Text = file.ReadLine();
-                labelB.Text = file.ReadLine();
-                labelC.Text = file.ReadLine();
-                labelD.Text = file.ReadLine();
-            }
-
+        public void loadQuestions()
+        {
+            ques = new Storage();
+        }
+        public void Gameload()
+        {
+            
+            level = 0;
+            gameRunning = true;
             pictureBoxPlay.Visible = false;
             pictureBoxBG.Visible = true;
             pictureBox5050.Visible = true;
-            pictureBoxphoneFriend.Visible = true;
+            pictureBoxPhoneFriend.Visible = true;
             pictureBoxWalkAway.Visible = true;
             pictureBoxMoney.Visible = true;
+            pictureBoxExit.Visible = true;
             groupBox1.Visible = true;
             labelQuestion.Visible = true;
             labelA.Visible = true;
             labelB.Visible = true;
             labelC.Visible = true;
             labelD.Visible = true;
-        }
-    }
-}
+        }//GameLoad
+
+        public void displayQuestion()
+        {
+           
+            labelQuestion.Text = ques.questions[level].question;
+            labelA.Text = ques.questions[level].answer1;
+            labelB.Text = ques.questions[level].answer2;
+            labelC.Text = ques.questions[level].answer3;
+            labelD.Text = ques.questions[level].answer4;
+
+        }//GetQuestion
+
+
+
+
+
+
+
+
+
+
+
+
+
+        public void GameExit()
+        {
+            pictureBoxPlay.Visible = true;
+            pictureBoxBG.Visible = false;
+            pictureBox5050.Visible = false;
+            pictureBoxPhoneFriend.Visible = false;
+            pictureBoxWalkAway.Visible = false;
+            pictureBoxMoney.Visible = false;
+            pictureBoxExit.Visible = false;
+            groupBox1.Visible = false;
+            labelQuestion.Visible = false;
+            labelA.Visible = false;
+            labelB.Visible = false;
+            labelC.Visible = false;
+            labelD.Visible = false;
+        }//GameExit
+    }//MainWindow  
+}//Millionaire
+
+

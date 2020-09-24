@@ -30,7 +30,7 @@
         {
             this.pictureBoxBG = new System.Windows.Forms.PictureBox();
             this.pictureBox5050 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxphoneFriend = new System.Windows.Forms.PictureBox();
+            this.pictureBoxPhoneFriend = new System.Windows.Forms.PictureBox();
             this.pictureBoxWalkAway = new System.Windows.Forms.PictureBox();
             this.pictureBoxMoney = new System.Windows.Forms.PictureBox();
             this.labelQuestion = new System.Windows.Forms.Label();
@@ -40,13 +40,15 @@
             this.labelD = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pictureBoxPlay = new System.Windows.Forms.PictureBox();
+            this.pictureBoxExit = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5050)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxphoneFriend)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPhoneFriend)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWalkAway)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMoney)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPlay)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxExit)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBoxBG
@@ -74,16 +76,16 @@
             this.pictureBox5050.TabIndex = 1;
             this.pictureBox5050.TabStop = false;
             // 
-            // pictureBoxphoneFriend
+            // pictureBoxPhoneFriend
             // 
-            this.pictureBoxphoneFriend.Image = global::Millionaire.Properties.Resources.phone_a_friend_used;
-            this.pictureBoxphoneFriend.Location = new System.Drawing.Point(117, 22);
-            this.pictureBoxphoneFriend.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBoxphoneFriend.Name = "pictureBoxphoneFriend";
-            this.pictureBoxphoneFriend.Size = new System.Drawing.Size(107, 98);
-            this.pictureBoxphoneFriend.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxphoneFriend.TabIndex = 2;
-            this.pictureBoxphoneFriend.TabStop = false;
+            this.pictureBoxPhoneFriend.Image = global::Millionaire.Properties.Resources.phone_a_friend_used;
+            this.pictureBoxPhoneFriend.Location = new System.Drawing.Point(117, 22);
+            this.pictureBoxPhoneFriend.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBoxPhoneFriend.Name = "pictureBoxPhoneFriend";
+            this.pictureBoxPhoneFriend.Size = new System.Drawing.Size(107, 98);
+            this.pictureBoxPhoneFriend.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxPhoneFriend.TabIndex = 2;
+            this.pictureBoxPhoneFriend.TabStop = false;
             // 
             // pictureBoxWalkAway
             // 
@@ -184,7 +186,7 @@
             this.groupBox1.BackColor = System.Drawing.Color.MidnightBlue;
             this.groupBox1.BackgroundImage = global::Millionaire.Properties.Resources.Inner_Background1;
             this.groupBox1.Controls.Add(this.pictureBox5050);
-            this.groupBox1.Controls.Add(this.pictureBoxphoneFriend);
+            this.groupBox1.Controls.Add(this.pictureBoxPhoneFriend);
             this.groupBox1.Controls.Add(this.pictureBoxWalkAway);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -209,7 +211,19 @@
             this.pictureBoxPlay.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxPlay.TabIndex = 12;
             this.pictureBoxPlay.TabStop = false;
-            this.pictureBoxPlay.Click += new System.EventHandler(this.pictureBox5_Click);
+            this.pictureBoxPlay.Click += new System.EventHandler(this.pictureBoxPlay_Click);
+            // 
+            // pictureBoxExit
+            // 
+            this.pictureBoxExit.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBoxExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxExit.Location = new System.Drawing.Point(101, 78);
+            this.pictureBoxExit.Name = "pictureBoxExit";
+            this.pictureBoxExit.Size = new System.Drawing.Size(100, 50);
+            this.pictureBoxExit.TabIndex = 13;
+            this.pictureBoxExit.TabStop = false;
+            this.pictureBoxExit.Visible = false;
+            this.pictureBoxExit.Click += new System.EventHandler(this.pictureBoxExit_Click);
             // 
             // MainWindow
             // 
@@ -218,6 +232,7 @@
             this.BackgroundImage = global::Millionaire.Properties.Resources.Main_Window_Background1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1083, 553);
+            this.Controls.Add(this.pictureBoxExit);
             this.Controls.Add(this.pictureBoxPlay);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.labelD);
@@ -233,11 +248,12 @@
             this.Load += new System.EventHandler(this.MainWindow_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBG)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5050)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxphoneFriend)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPhoneFriend)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWalkAway)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMoney)).EndInit();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPlay)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxExit)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -247,7 +263,7 @@
 
         private System.Windows.Forms.PictureBox pictureBoxBG;
         private System.Windows.Forms.PictureBox pictureBox5050;
-        private System.Windows.Forms.PictureBox pictureBoxphoneFriend;
+        private System.Windows.Forms.PictureBox pictureBoxPhoneFriend;
         private System.Windows.Forms.PictureBox pictureBoxWalkAway;
         private System.Windows.Forms.PictureBox pictureBoxMoney;
         private System.Windows.Forms.Label labelQuestion;
@@ -257,6 +273,7 @@
         private System.Windows.Forms.Label labelD;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.PictureBox pictureBoxPlay;
+        private System.Windows.Forms.PictureBox pictureBoxExit;
     }
 }
 
