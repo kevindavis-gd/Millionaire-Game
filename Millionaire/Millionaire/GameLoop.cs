@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
+using System.Timers;
 using System.Windows.Forms;
 using System.IO;
 
@@ -22,18 +24,22 @@ namespace Millionaire
             
         }
 
-        public void Run()
+        public async void Run()
         {
             window.loadQuestions();
             window.Gameload();
 
+            //game loop finaly working
+
+            //do while requirement met :)
             
-            while(true)
+            do
             {
-                window.set_level(1);
+
+                window.set_level(2);
                 window.displayQuestion();
-            }
-           
+                await Task.Delay(5);
+            } while (window.get_isRunning());
 
 
         }
