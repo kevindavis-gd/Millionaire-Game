@@ -40,7 +40,6 @@
             this.labelD = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pictureBoxPlay = new System.Windows.Forms.PictureBox();
-            this.pictureBoxExit = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5050)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPhoneFriend)).BeginInit();
@@ -48,7 +47,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMoney)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPlay)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxExit)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBoxBG
@@ -89,6 +87,7 @@
             // 
             // pictureBoxWalkAway
             // 
+            this.pictureBoxWalkAway.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxWalkAway.Image = global::Millionaire.Properties.Resources.walk_away;
             this.pictureBoxWalkAway.Location = new System.Drawing.Point(229, 22);
             this.pictureBoxWalkAway.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -97,10 +96,11 @@
             this.pictureBoxWalkAway.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxWalkAway.TabIndex = 3;
             this.pictureBoxWalkAway.TabStop = false;
+            this.pictureBoxWalkAway.Click += new System.EventHandler(this.pictureBoxWalkAway_Click);
             // 
             // pictureBoxMoney
             // 
-            this.pictureBoxMoney.BackgroundImage = global::Millionaire.Properties.Resources.MoneyChartSmall;
+            this.pictureBoxMoney.BackgroundImage = global::Millionaire.Properties.Resources.MoneyChartSmall_0_;
             this.pictureBoxMoney.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBoxMoney.Location = new System.Drawing.Point(747, 84);
             this.pictureBoxMoney.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -138,6 +138,7 @@
             this.labelA.TabIndex = 7;
             this.labelA.Text = "Nothing";
             this.labelA.Visible = false;
+            this.labelA.Click += new System.EventHandler(this.labelA_Click);
             // 
             // labelB
             // 
@@ -152,6 +153,7 @@
             this.labelB.TabIndex = 8;
             this.labelB.Text = "Live in the Sea";
             this.labelB.Visible = false;
+            this.labelB.Click += new System.EventHandler(this.labelB_Click);
             // 
             // labelC
             // 
@@ -166,6 +168,7 @@
             this.labelC.TabIndex = 9;
             this.labelC.Text = "Kill All Humans";
             this.labelC.Visible = false;
+            this.labelC.Click += new System.EventHandler(this.labelC_Click);
             // 
             // labelD
             // 
@@ -180,6 +183,7 @@
             this.labelD.TabIndex = 10;
             this.labelD.Text = "Move to Mars";
             this.labelD.Visible = false;
+            this.labelD.Click += new System.EventHandler(this.labelD_Click);
             // 
             // groupBox1
             // 
@@ -213,18 +217,6 @@
             this.pictureBoxPlay.TabStop = false;
             this.pictureBoxPlay.Click += new System.EventHandler(this.pictureBoxPlay_Click);
             // 
-            // pictureBoxExit
-            // 
-            this.pictureBoxExit.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBoxExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBoxExit.Location = new System.Drawing.Point(101, 78);
-            this.pictureBoxExit.Name = "pictureBoxExit";
-            this.pictureBoxExit.Size = new System.Drawing.Size(100, 50);
-            this.pictureBoxExit.TabIndex = 13;
-            this.pictureBoxExit.TabStop = false;
-            this.pictureBoxExit.Visible = false;
-            this.pictureBoxExit.Click += new System.EventHandler(this.pictureBoxExit_Click);
-            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -232,7 +224,6 @@
             this.BackgroundImage = global::Millionaire.Properties.Resources.Main_Window_Background1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1083, 553);
-            this.Controls.Add(this.pictureBoxExit);
             this.Controls.Add(this.pictureBoxPlay);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.labelD);
@@ -253,7 +244,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMoney)).EndInit();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPlay)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxExit)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -273,7 +263,6 @@
         private System.Windows.Forms.Label labelD;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.PictureBox pictureBoxPlay;
-        private System.Windows.Forms.PictureBox pictureBoxExit;
     }
 }
 

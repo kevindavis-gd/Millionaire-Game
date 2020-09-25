@@ -17,6 +17,9 @@ namespace Millionaire
         int level;
         Storage ques;
         bool gameRunning;
+        string AnswerChoice;
+        GameLoop loop;
+        int WalkAwayFigure = 0;
 
 
         public int get_level()
@@ -49,13 +52,9 @@ namespace Millionaire
         //when the play button is clicked
         private void pictureBoxPlay_Click(object sender, EventArgs e)
         {
-            GameLoop loop = new GameLoop(this);
+            loop = new GameLoop(this);
             loop.Run();
 
-        }
-        private void pictureBoxExit_Click(object sender, EventArgs e)
-        {
-            GameExit();
         }
 
         public void loadQuestions()
@@ -73,7 +72,6 @@ namespace Millionaire
             pictureBoxPhoneFriend.Visible = true;
             pictureBoxWalkAway.Visible = true;
             pictureBoxMoney.Visible = true;
-            pictureBoxExit.Visible = true;
             groupBox1.Visible = true;
             labelQuestion.Visible = true;
             labelA.Visible = true;
@@ -84,7 +82,6 @@ namespace Millionaire
 
         public void displayQuestion()
         {
-           
             labelQuestion.Text = ques.questions[level].question;
             labelA.Text = ques.questions[level].answer1;
             labelB.Text = ques.questions[level].answer2;
@@ -93,34 +90,107 @@ namespace Millionaire
 
         }//GetQuestion
 
+     
 
-
-
-
-
-
-
-
-
-
-
-
-        public void GameExit()
+        private void labelA_Click(object sender, EventArgs e)
         {
-            pictureBoxPlay.Visible = true;
-            pictureBoxBG.Visible = false;
-            pictureBox5050.Visible = false;
-            pictureBoxPhoneFriend.Visible = false;
-            pictureBoxWalkAway.Visible = false;
-            pictureBoxMoney.Visible = false;
-            pictureBoxExit.Visible = false;
-            groupBox1.Visible = false;
-            labelQuestion.Visible = false;
-            labelA.Visible = false;
-            labelB.Visible = false;
-            labelC.Visible = false;
-            labelD.Visible = false;
-        }//GameExit
+            AnswerChoice = labelA.Text;
+            loop.set_task(true);
+        }
+
+        private void labelB_Click(object sender, EventArgs e)
+        {
+            AnswerChoice = labelB.Text;
+            loop.set_task(true);
+        }
+
+        private void labelC_Click(object sender, EventArgs e)
+        {
+            AnswerChoice = labelC.Text;
+            loop.set_task(true);
+        }
+
+        private void labelD_Click(object sender, EventArgs e)
+        {
+            AnswerChoice = labelD.Text;
+            loop.set_task(true);
+        }
+
+
+        public void CheckAnswer()
+        {
+            if (AnswerChoice == ques.questions[level].correctAnswer)
+            {
+                level += 1;
+                MessageBox.Show("correct");
+
+                picture_change();
+
+            }
+            else
+            {
+                string message = "wring, walk away value is $"+ WalkAwayFigure;
+                MessageBox.Show(message);
+                Application.Restart();
+
+
+            }
+        }
+
+        public void picture_change()
+        {
+            if (level == 1)
+            {
+                pictureBoxMoney.Image = Millionaire.Properties.Resources.MoneyChartSmall_1;
+                WalkAwayFigure = 100;
+            }
+                
+            else if (level == 2)
+                pictureBoxMoney.Image = Millionaire.Properties.Resources.MoneyChartSmall_2;
+            else if (level == 3)
+                pictureBoxMoney.Image = Millionaire.Properties.Resources.MoneyChartSmall_3;
+            else if (level == 4)
+                pictureBoxMoney.Image = Millionaire.Properties.Resources.MoneyChartSmall_4;
+            if (level == 5)
+            {
+                pictureBoxMoney.Image = Millionaire.Properties.Resources.MoneyChartSmall_5;
+                WalkAwayFigure = 1000;
+            }
+            else if (level == 6)
+                pictureBoxMoney.Image = Millionaire.Properties.Resources.MoneyChartSmall_6;
+            else if (level == 7)
+                pictureBoxMoney.Image = Millionaire.Properties.Resources.MoneyChartSmall_7;
+            else if (level == 8)
+                pictureBoxMoney.Image = Millionaire.Properties.Resources.MoneyChartSmall_8;
+            else if (level == 9)
+                pictureBoxMoney.Image = Millionaire.Properties.Resources.MoneyChartSmall_9;
+            if (level == 10)
+            {
+                pictureBoxMoney.Image = Millionaire.Properties.Resources.MoneyChartSmall_1;
+                WalkAwayFigure = 50000;
+            }
+            else if (level == 11)
+                pictureBoxMoney.Image = Millionaire.Properties.Resources.MoneyChartSmall_11;
+            else if (level == 12)
+                pictureBoxMoney.Image = Millionaire.Properties.Resources.MoneyChartSmall_12;
+            else if (level == 13)
+                pictureBoxMoney.Image = Millionaire.Properties.Resources.MoneyChartSmall_13;
+            else if (level == 14)
+                pictureBoxMoney.Image = Millionaire.Properties.Resources.MoneyChartSmall_14;
+            if (level == 15)
+            {
+                pictureBoxMoney.Image = Millionaire.Properties.Resources.MoneyChartSmall_15;
+                WalkAwayFigure = 1000000;
+            }
+
+        }
+
+        private void pictureBoxWalkAway_Click(object sender, EventArgs e)
+        {
+            string message = "wring, walk away value is $" + WalkAwayFigure;
+            MessageBox.Show(message);
+            Application.Restart();
+        }
     }//MainWindow  
 }//Millionaire
 

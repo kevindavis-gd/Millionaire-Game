@@ -116,5 +116,53 @@
   <ItemGroup>
     <None Include="Resources\playbutton1.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MoneyChartSmall_0 .jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MoneyChartSmall_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MoneyChartSmall_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MoneyChartSmall_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MoneyChartSmall_4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MoneyChartSmall_5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MoneyChartSmall_6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MoneyChartSmall_7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MoneyChartSmall_8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MoneyChartSmall_9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MoneyChartSmall_10.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MoneyChartSmall_11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MoneyChartSmall_12.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MoneyChartSmall_13.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MoneyChartSmall_14.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MoneyChartSmall_15.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

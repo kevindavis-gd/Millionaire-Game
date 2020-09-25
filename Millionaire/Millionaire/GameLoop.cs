@@ -17,6 +17,8 @@ namespace Millionaire
     public class GameLoop
     {
         MainWindow window;
+        TaskCompletionSource<bool> tcs = null;
+
         //internal by default, change to public
         public GameLoop(MainWindow win)
         {
@@ -28,6 +30,7 @@ namespace Millionaire
         {
             window.loadQuestions();
             window.Gameload();
+            
 
             //game loop finaly working
 
@@ -35,13 +38,21 @@ namespace Millionaire
             
             do
             {
-
-                window.set_level(2);
                 window.displayQuestion();
-                await Task.Delay(5);
+                tcs = new TaskCompletionSource<bool>();
+                await tcs.Task;
+
+                //tcs?.TrySetResult(true);
+                window.CheckAnswer();
+                //window.set_level(window.get_level() + 1);
             } while (window.get_isRunning());
 
 
+        }
+
+        public void set_task(bool x)
+        {
+            tcs?.TrySetResult(x);
         }
 
     }
