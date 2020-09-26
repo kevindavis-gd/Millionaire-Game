@@ -118,76 +118,79 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Inner Background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Inner Background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="MoneyChartSmall_11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MoneyChartSmall_11.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Main Window Background1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Main Window Background1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="50 50 used" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\50 50 used.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Inner Background1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Inner Background1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="phone a friend used" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\phone a friend used.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MoneyChartSmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MoneyChartSmall1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="playbutton1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\playbutton1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="walk away" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\walk away.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="MoneyChartSmall_10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MoneyChartSmall_10.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="MoneyChartSmall_0 " type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MoneyChartSmall_0 .jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="MoneyChartSmall_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MoneyChartSmall_1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="MoneyChartSmall_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MoneyChartSmall_2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MoneyChartSmall_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MoneyChartSmall_3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MoneyChartSmall_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MoneyChartSmall_4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MoneyChartSmall_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MoneyChartSmall_5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MoneyChartSmall_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MoneyChartSmall_6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MoneyChartSmall_7" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MoneyChartSmall_7.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MoneyChartSmall_8" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MoneyChartSmall_8.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MoneyChartSmall_9" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MoneyChartSmall_9.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MoneyChartSmall_10" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MoneyChartSmall_10.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MoneyChartSmall_11" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MoneyChartSmall_11.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="MoneyChartSmall_12" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MoneyChartSmall_12.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="MoneyChartSmall_13" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MoneyChartSmall_13.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="MoneyChartSmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MoneyChartSmall1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MoneyChartSmall_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MoneyChartSmall_6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MoneyChartSmall_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MoneyChartSmall_3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MoneyChartSmall_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MoneyChartSmall_1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MoneyChartSmall_9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MoneyChartSmall_9.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="walk away" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\walk away.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="phone a friend used" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\phone a friend used.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="playbutton1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\playbutton1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="MoneyChartSmall_14" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MoneyChartSmall_14.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="MoneyChartSmall_8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MoneyChartSmall_8.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Inner Background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Inner Background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MoneyChartSmall_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MoneyChartSmall_4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="MoneyChartSmall_15" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MoneyChartSmall_15.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="50 50 used" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\50 50 used.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MoneyChartSmall_7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MoneyChartSmall_7.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Inner Background1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Inner Background1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MoneyChartSmall_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MoneyChartSmall_5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MoneyChartSmall_13" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MoneyChartSmall_13.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="50 50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\50 50.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

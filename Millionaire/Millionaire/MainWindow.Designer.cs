@@ -65,7 +65,8 @@
             // 
             // pictureBox5050
             // 
-            this.pictureBox5050.Image = global::Millionaire.Properties.Resources._50_50_used;
+            this.pictureBox5050.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox5050.Image = global::Millionaire.Properties.Resources._50_50;
             this.pictureBox5050.Location = new System.Drawing.Point(7, 22);
             this.pictureBox5050.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox5050.Name = "pictureBox5050";
@@ -73,6 +74,7 @@
             this.pictureBox5050.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5050.TabIndex = 1;
             this.pictureBox5050.TabStop = false;
+            this.pictureBox5050.Click += new System.EventHandler(this.pictureBox5050_Click);
             // 
             // pictureBoxPhoneFriend
             // 
@@ -115,12 +117,12 @@
             // 
             this.labelQuestion.AutoSize = true;
             this.labelQuestion.BackColor = System.Drawing.Color.Transparent;
-            this.labelQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelQuestion.ForeColor = System.Drawing.Color.Transparent;
             this.labelQuestion.Image = global::Millionaire.Properties.Resources.Inner_Background;
-            this.labelQuestion.Location = new System.Drawing.Point(201, 308);
+            this.labelQuestion.Location = new System.Drawing.Point(210, 300);
             this.labelQuestion.Name = "labelQuestion";
-            this.labelQuestion.Size = new System.Drawing.Size(337, 20);
+            this.labelQuestion.Size = new System.Drawing.Size(291, 17);
             this.labelQuestion.TabIndex = 6;
             this.labelQuestion.Text = "What can we do about global warming?";
             this.labelQuestion.Visible = false;
