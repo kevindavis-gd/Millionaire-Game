@@ -102,7 +102,7 @@
             // 
             // pictureBoxMoney
             // 
-            this.pictureBoxMoney.BackgroundImage = global::Millionaire.Properties.Resources.MoneyChartSmall_0_;
+            this.pictureBoxMoney.BackgroundImage = global::Millionaire.Properties.Resources.MoneyChartSmall;
             this.pictureBoxMoney.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBoxMoney.Location = new System.Drawing.Point(747, 84);
             this.pictureBoxMoney.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

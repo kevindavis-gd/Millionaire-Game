@@ -15,55 +15,44 @@ namespace Millionaire
     public partial class MainWindow : Form
     {
         int level;
-        Storage ques;
+        int SafeFigure = 0;
+        int CurrentWinnings = 0;
         bool gameRunning;
         string AnswerChoice;
         GameLoop loop;
-        int SafeFigure = 0;
-        int CurrentWinnings = 0;
+        Storage ques;
 
 
-        public int get_level()
-        {
-            return level;
-        }
-        public void set_level(int x)
-        {
-            level = x;
-        }
-
-        public bool get_isRunning()
-        {
-            return gameRunning;
-        }
-        public void set_isRunning(bool x)
-        {
-            gameRunning = x;
-        }
+        public int get_level() {return level;}
+        public void set_level(int x) {level = x;}
+        public bool get_isRunning() {return gameRunning;}
+       // public void set_isRunning(bool x) { gameRunning = x;}
 
 
         public MainWindow()
         {
             InitializeComponent();
         }
-
         private void MainWindow_Load(object sender, EventArgs e)
         {
         }
+
         //when the play button is clicked
         private void pictureBoxPlay_Click(object sender, EventArgs e)
         {
+            //initilize loop and pass this GUI to the loop
             loop = new GameLoop(this);
+            //call the loops run method
             loop.Run();
-
         }
-
+       
         public void loadQuestions()
         {
             ques = new Storage();
         }
+        //load game method that is called at the start of the game
         public void Gameload()
-        { 
+        {   //set the game level to 0
             level = 0;
             gameRunning = true;
             pictureBoxPlay.Visible = false;
@@ -80,7 +69,7 @@ namespace Millionaire
             labelD.Visible = true;
             //Allow Question label to wrap
             labelQuestion.MaximumSize = new Size(350, 0);
-        }//GameLoad
+        }
 
         public void displayQuestion()
         {
@@ -94,33 +83,41 @@ namespace Millionaire
             }
             else
             {
+                pictureBoxBG.Image = Millionaire.Properties.Resources.Winner;
+                gameRunning = false;
+                pictureBoxPlay.Visible = false;
+                pictureBox5050.Visible = false;
+                pictureBoxPhoneFriend.Visible = false;
+                pictureBoxWalkAway.Visible = false;
+                pictureBoxMoney.Visible = false;
+                groupBox1.Visible = false;
+                labelQuestion.Visible = false;
+                labelA.Visible = false;
+                labelB.Visible = false;
+                labelC.Visible = false;
+                labelD.Visible = false;
                 MessageBox.Show("You Win");
                 Application.Restart();
             }
-            
-
         }//GetQuestion
 
      
-
         private void labelA_Click(object sender, EventArgs e)
         {
             AnswerChoice = labelA.Text;
+            //continue from waiting in game loop
             loop.set_task(true);
         }
-
         private void labelB_Click(object sender, EventArgs e)
         {
             AnswerChoice = labelB.Text;
             loop.set_task(true);
         }
-
         private void labelC_Click(object sender, EventArgs e)
         {
             AnswerChoice = labelC.Text;
             loop.set_task(true);
         }
-
         private void labelD_Click(object sender, EventArgs e)
         {
             AnswerChoice = labelD.Text;
@@ -133,8 +130,6 @@ namespace Millionaire
             if (AnswerChoice == ques.questions[level].correctAnswer)
             {
                 level += 1;
-                //MessageBox.Show("correct");
-
                 picture_change();
             }
             else
@@ -142,8 +137,6 @@ namespace Millionaire
                 string message = "wrong, you only won $"+ SafeFigure;
                 MessageBox.Show(message);
                 Application.Restart();
-
-
             }
         }
 
@@ -152,29 +145,24 @@ namespace Millionaire
             if (level == 1)
             {
                 pictureBoxMoney.Image = Millionaire.Properties.Resources.MoneyChartSmall_1;
-                
                 CurrentWinnings = 100;
                 SafeFigure = CurrentWinnings;
-            }
-                
+            }   
             else if (level == 2)
             {
                 pictureBoxMoney.Image = Millionaire.Properties.Resources.MoneyChartSmall_2;
                 CurrentWinnings = 200;
             }
-                
             else if (level == 3)
             {
                 pictureBoxMoney.Image = Millionaire.Properties.Resources.MoneyChartSmall_3;
                 CurrentWinnings = 300;
             }
-                
             else if (level == 4)
             {
                 pictureBoxMoney.Image = Millionaire.Properties.Resources.MoneyChartSmall_4;
                 CurrentWinnings = 500;
-            }
-                
+            } 
             if (level == 5)
             {
                 pictureBoxMoney.Image = Millionaire.Properties.Resources.MoneyChartSmall_5;
@@ -186,25 +174,21 @@ namespace Millionaire
                 pictureBoxMoney.Image = Millionaire.Properties.Resources.MoneyChartSmall_6;
                 CurrentWinnings = 2000;
             }
-                
             else if (level == 7)
             {
                 pictureBoxMoney.Image = Millionaire.Properties.Resources.MoneyChartSmall_7;
                 CurrentWinnings = 5000;
-            }
-                
+            } 
             else if (level == 8)
             {
                 pictureBoxMoney.Image = Millionaire.Properties.Resources.MoneyChartSmall_8;
                 CurrentWinnings = 12500;
             }
-                
             else if (level == 9) 
             {
                 pictureBoxMoney.Image = Millionaire.Properties.Resources.MoneyChartSmall_9;
                 CurrentWinnings = 25000;
             }
-               
             if (level == 10)
             {
                 pictureBoxMoney.Image = Millionaire.Properties.Resources.MoneyChartSmall_10;
@@ -216,31 +200,26 @@ namespace Millionaire
                 pictureBoxMoney.Image = Millionaire.Properties.Resources.MoneyChartSmall_11;
                 CurrentWinnings = 75000;
             }
-                
             else if (level == 12)
             {
                 pictureBoxMoney.Image = Millionaire.Properties.Resources.MoneyChartSmall_12;
                 CurrentWinnings = 150000;
-            }
-                
+            } 
             else if (level == 13)
             {
                 pictureBoxMoney.Image = Millionaire.Properties.Resources.MoneyChartSmall_13;
                 CurrentWinnings = 325000;
             }
-                
             else if (level == 14)
             {
                 pictureBoxMoney.Image = Millionaire.Properties.Resources.MoneyChartSmall_14;
                 CurrentWinnings = 500000;
             }
-                
             if (level == 15)
             {
                 pictureBoxMoney.Image = Millionaire.Properties.Resources.MoneyChartSmall_15;
                 SafeFigure = 1000000;
             }
-
         }
 
         private void pictureBoxWalkAway_Click(object sender, EventArgs e)
@@ -256,7 +235,7 @@ namespace Millionaire
             labelB.Visible = false;
             labelC.Visible = false;
         }
-    }//MainWindow  
-}//Millionaire
+    }
+}
 
 
