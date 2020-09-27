@@ -1,13 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿// Name: Kevin Davis ,Joseph Williamson, Semeion Stafford
+// Class : CMPS4143
+// Assignment: Program 4
+// Date: 09/28/2020
+// Description :Replicate the "Who Wants to be a Millionaire Game
+//through the use of multiple c# classes, public and private, and multiple gui demonstrations.
+using System;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
 using System.Media;
 
 
@@ -24,16 +23,14 @@ namespace Millionaire
         string AnswerChoice;
         GameLoop loop;
         Storage ques;
-        //SoundPlayer backgroundMusic = new SoundPlayer("Y&V - Lune [NCS Release].wav");
         SoundPlayer correctAns = new SoundPlayer("confirmation_002.wav");
         SoundPlayer wrongAns = new SoundPlayer("error_007.wav");
-
+        private static Random rand = new Random();
 
         public int get_level() { return level; }
         public void set_level(int x) { level = x; }
         public bool get_isRunning() { return gameRunning; }
-        // public void set_isRunning(bool x) { gameRunning = x;}
-
+        public void set_isRunning(bool x) { gameRunning = x; }
 
         public MainWindow()
         {
@@ -41,6 +38,7 @@ namespace Millionaire
         }
         private void MainWindow_Load(object sender, EventArgs e)
         {
+            //dont need anything to happen on load
         }
 
         //when the play button is clicked
@@ -59,7 +57,7 @@ namespace Millionaire
         //load game method that is called at the start of the game
         public void Gameload()
         {
-            //Play sounds once so that they will play correctly when required
+            //Play sounds once so that they will load into memory and play quickly when required
             correctAns.Play();
             wrongAns.Play();
             //set the game level to 0
@@ -81,7 +79,7 @@ namespace Millionaire
             //Allow Question label to wrap
             labelQuestion.MaximumSize = new Size(350, 0);
             pictureBoxMoney.Image = Millionaire.Properties.Resources.MoneyChartSmall_1;
-        }
+        }//end GameLoad
 
         public void displayQuestion()
         {
@@ -91,14 +89,10 @@ namespace Millionaire
                 String[] qArray = { ques.Questions[level].Answer1, ques.Questions[level].Answer2, ques.Questions[level].Answer3, ques.Questions[level].Answer4 };
                 //randomize the position of the questions
                 Shuffle<string>(qArray);
-                //used if 5050 is used
-
                 labelA.Visible = true;
                 labelB.Visible = true;
                 labelC.Visible = true;
                 labelD.Visible = true;
-
-
                 labelQuestion.Text = ques.Questions[level].Question;
                 labelA.Text = qArray[0];
                 labelB.Text = qArray[1];
@@ -107,6 +101,7 @@ namespace Millionaire
             }
             else
             {
+                set_isRunning(false);
                 //if there is not an issue with the import of the file
                 if (!ques.ImportError)
                 {
@@ -127,9 +122,7 @@ namespace Millionaire
                 }
                 Application.Restart();
             }
-        }//GetQuestion
-
-        private static Random rand = new Random();
+        }//end DisplayQuestion
 
         public static void Shuffle<T>(T[] array)
         {
@@ -142,7 +135,7 @@ namespace Millionaire
                 array[k] = array[n];
                 array[n] = value;
             }
-        }
+        }//end Shuffle
 
         private void labelA_Click(object sender, EventArgs e)
         {
@@ -187,13 +180,14 @@ namespace Millionaire
             }
             else
             {
+                set_isRunning(false);
                 wrongAns.Play();
                 //correct answer displayed after incorrrect answer
                 string message = "wrong, the correct answer is \"" + ques.Questions[level].CorrectAnswer + "\" you only won $" + SafeFigure;
                 MessageBox.Show(message);
                 Application.Restart();
             }
-        }
+        }//end CheckAnswer
 
         public void picture_change()
         {
@@ -270,7 +264,7 @@ namespace Millionaire
                 pictureBoxMoney.Image = Millionaire.Properties.Resources.MoneyChartSmall_15;
                 CurrentWinnings = 500000;
             }
-        }
+        }// end PictureChange
 
         private void pictureBoxWalkAway_Click(object sender, EventArgs e)
         {
@@ -313,7 +307,7 @@ namespace Millionaire
 
             }
 
-        }
+        }// end PictureBox5050 click
 
         private void buttonInstruction_Click(object sender, EventArgs e)
         {

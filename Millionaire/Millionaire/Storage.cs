@@ -1,17 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿// Name: Kevin Davis ,Joseph Williamson, Semeion Stafford
+// Class : CMPS4143
+// Assignment: Program 4
+// Date: 09/28/2020
+// Description :Replicate the "Who Wants to be a Millionaire Game
+//through the use of multiple c# classes, public and private, and multiple gui demonstrations.
 using System.Windows.Forms;
 using System.IO;
 
 namespace Millionaire
 {
-
     class Storage
     {
         bool importError = false;
@@ -48,7 +45,7 @@ namespace Millionaire
                     file.ReadLine(),
                     file.ReadLine(),
                     file.ReadLine());
-                }//while
+                }//for
                 file.Close();
                 questions = temp;
             }//if
@@ -56,17 +53,17 @@ namespace Millionaire
             {
                 importError = true;
                 MessageBox.Show("ERROR LOADING QUESTIONS", "ERROR");
-            }
+            }//else
         }//Store Questions
 
         public bool ImportError
         {
             get { return importError; }
-        }
+        }//ImportError
 
         public Questions[] Questions
         {
             get { return questions; }
-        }
+        }//Questions
     }//storage
 }//Millionaire
