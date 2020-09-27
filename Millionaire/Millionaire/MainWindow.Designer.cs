@@ -40,6 +40,7 @@
             this.labelD = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pictureBoxPlay = new System.Windows.Forms.PictureBox();
+            this.buttonInstruction = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5050)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPhoneFriend)).BeginInit();
@@ -78,7 +79,8 @@
             // 
             // pictureBoxPhoneFriend
             // 
-            this.pictureBoxPhoneFriend.Image = global::Millionaire.Properties.Resources.phone_a_friend_used;
+            this.pictureBoxPhoneFriend.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxPhoneFriend.Image = global::Millionaire.Properties.Resources.phone_a_friend;
             this.pictureBoxPhoneFriend.Location = new System.Drawing.Point(117, 22);
             this.pictureBoxPhoneFriend.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBoxPhoneFriend.Name = "pictureBoxPhoneFriend";
@@ -86,6 +88,7 @@
             this.pictureBoxPhoneFriend.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxPhoneFriend.TabIndex = 2;
             this.pictureBoxPhoneFriend.TabStop = false;
+            this.pictureBoxPhoneFriend.Click += new System.EventHandler(this.pictureBoxPhoneFriend_Click);
             // 
             // pictureBoxWalkAway
             // 
@@ -219,6 +222,21 @@
             this.pictureBoxPlay.TabStop = false;
             this.pictureBoxPlay.Click += new System.EventHandler(this.pictureBoxPlay_Click);
             // 
+            // buttonInstruction
+            // 
+            this.buttonInstruction.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonInstruction.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonInstruction.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonInstruction.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonInstruction.Location = new System.Drawing.Point(92, 71);
+            this.buttonInstruction.Name = "buttonInstruction";
+            this.buttonInstruction.Size = new System.Drawing.Size(125, 44);
+            this.buttonInstruction.TabIndex = 13;
+            this.buttonInstruction.Text = "Instructions";
+            this.buttonInstruction.UseVisualStyleBackColor = false;
+            this.buttonInstruction.Visible = false;
+            this.buttonInstruction.Click += new System.EventHandler(this.buttonInstruction_Click);
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -226,6 +244,7 @@
             this.BackgroundImage = global::Millionaire.Properties.Resources.Main_Window_Background1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1083, 553);
+            this.Controls.Add(this.buttonInstruction);
             this.Controls.Add(this.pictureBoxPlay);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.labelD);
@@ -265,6 +284,7 @@
         private System.Windows.Forms.Label labelD;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.PictureBox pictureBoxPlay;
+        private System.Windows.Forms.Button buttonInstruction;
     }
 }
 

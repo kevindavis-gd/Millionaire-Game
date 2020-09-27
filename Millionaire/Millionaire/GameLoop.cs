@@ -40,7 +40,6 @@ namespace Millionaire
                 await tcs.Task;
                 //when the button is clicked check answer
                 window.CheckAnswer();
-                //window.set_level(window.get_level() + 1);
             } while (window.get_isRunning());
         }
         //continue from waiting

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Media;
 
 
 namespace Millionaire
@@ -18,15 +19,20 @@ namespace Millionaire
         int SafeFigure = 0;
         int CurrentWinnings = 0;
         bool gameRunning;
+        bool fiftyfifty = true;
+        bool phoneFriend = true;
         string AnswerChoice;
         GameLoop loop;
         Storage ques;
+        //SoundPlayer backgroundMusic = new SoundPlayer("Y&V - Lune [NCS Release].wav");
+        SoundPlayer correctAns = new SoundPlayer("confirmation_002.wav");
+        SoundPlayer wrongAns = new SoundPlayer("error_007.wav");
 
 
-        public int get_level() {return level;}
-        public void set_level(int x) {level = x;}
-        public bool get_isRunning() {return gameRunning;}
-       // public void set_isRunning(bool x) { gameRunning = x;}
+        public int get_level() { return level; }
+        public void set_level(int x) { level = x; }
+        public bool get_isRunning() { return gameRunning; }
+        // public void set_isRunning(bool x) { gameRunning = x;}
 
 
         public MainWindow()
@@ -45,19 +51,24 @@ namespace Millionaire
             //call the loops run method
             loop.Run();
         }
-       
+
         public void loadQuestions()
         {
             ques = new Storage();
         }
         //load game method that is called at the start of the game
         public void Gameload()
-        {   //set the game level to 0
+        {
+            //Play sounds once so that they will play correctly when required
+            correctAns.Play();
+            wrongAns.Play();
+            //set the game level to 0
             level = 0;
             gameRunning = true;
             pictureBoxPlay.Visible = false;
             pictureBoxBG.Visible = true;
             pictureBox5050.Visible = true;
+            buttonInstruction.Visible = true;
             pictureBoxPhoneFriend.Visible = true;
             pictureBoxWalkAway.Visible = true;
             pictureBoxMoney.Visible = true;
@@ -77,9 +88,17 @@ namespace Millionaire
             //if there is an issue with the file import, dont load the questions
             if (level < 15 && !ques.ImportError)
             {
-                String []qArray = {ques.Questions[level].Answer1, ques.Questions[level].Answer2, ques.Questions[level].Answer3, ques.Questions[level].Answer4};
+                String[] qArray = { ques.Questions[level].Answer1, ques.Questions[level].Answer2, ques.Questions[level].Answer3, ques.Questions[level].Answer4 };
                 //randomize the position of the questions
-                Shuffle(qArray);
+                Shuffle<string>(qArray);
+                //used if 5050 is used
+
+                labelA.Visible = true;
+                labelB.Visible = true;
+                labelC.Visible = true;
+                labelD.Visible = true;
+
+
                 labelQuestion.Text = ques.Questions[level].Question;
                 labelA.Text = qArray[0];
                 labelB.Text = qArray[1];
@@ -112,14 +131,14 @@ namespace Millionaire
 
         private static Random rand = new Random();
 
-        public static void Shuffle( String[] array)
+        public static void Shuffle<T>(T[] array)
         {
             int n = array.Length;
             while (n > 0)
             {
                 n--;
                 int k = rand.Next(n + 1);
-                String value = array[k];
+                T value = array[k];
                 array[k] = array[n];
                 array[n] = value;
             }
@@ -147,17 +166,30 @@ namespace Millionaire
             loop.set_task(true);
         }
 
-
         public void CheckAnswer()
         {
+            if (labelA.Text != ques.Questions[level].CorrectAnswer)
+                labelA.Visible = false;
+            if (labelB.Text != ques.Questions[level].CorrectAnswer)
+                labelB.Visible = false;
+            if (labelC.Text != ques.Questions[level].CorrectAnswer)
+                labelC.Visible = false;
+            if (labelD.Text != ques.Questions[level].CorrectAnswer)
+                labelD.Visible = false;
             if (AnswerChoice == ques.Questions[level].CorrectAnswer)
+
             {
+                correctAns.Play();
+                //correct answer is displayed
+                MessageBox.Show("Correct,  \"" + ques.Questions[level].CorrectAnswer + "\" is the answer");
                 level += 1;
                 picture_change();
             }
             else
             {
-                string message = "wrong, you only won $"+ SafeFigure;
+                wrongAns.Play();
+                //correct answer displayed after incorrrect answer
+                string message = "wrong, the correct answer is \"" + ques.Questions[level].CorrectAnswer + "\" you only won $" + SafeFigure;
                 MessageBox.Show(message);
                 Application.Restart();
             }
@@ -170,7 +202,7 @@ namespace Millionaire
                 pictureBoxMoney.Image = Millionaire.Properties.Resources.MoneyChartSmall_2;
                 CurrentWinnings = 100;
                 SafeFigure = CurrentWinnings;
-            }   
+            }
             else if (level == 2)
             {
                 pictureBoxMoney.Image = Millionaire.Properties.Resources.MoneyChartSmall_3;
@@ -185,7 +217,7 @@ namespace Millionaire
             {
                 pictureBoxMoney.Image = Millionaire.Properties.Resources.MoneyChartSmall_5;
                 CurrentWinnings = 500;
-            } 
+            }
             if (level == 5)
             {
                 pictureBoxMoney.Image = Millionaire.Properties.Resources.MoneyChartSmall_6;
@@ -201,13 +233,13 @@ namespace Millionaire
             {
                 pictureBoxMoney.Image = Millionaire.Properties.Resources.MoneyChartSmall_8;
                 CurrentWinnings = 5000;
-            } 
+            }
             else if (level == 8)
             {
                 pictureBoxMoney.Image = Millionaire.Properties.Resources.MoneyChartSmall_9;
                 CurrentWinnings = 12500;
             }
-            else if (level == 9) 
+            else if (level == 9)
             {
                 pictureBoxMoney.Image = Millionaire.Properties.Resources.MoneyChartSmall_10;
                 CurrentWinnings = 25000;
@@ -227,7 +259,7 @@ namespace Millionaire
             {
                 pictureBoxMoney.Image = Millionaire.Properties.Resources.MoneyChartSmall_13;
                 CurrentWinnings = 150000;
-            } 
+            }
             else if (level == 13)
             {
                 pictureBoxMoney.Image = Millionaire.Properties.Resources.MoneyChartSmall_14;
@@ -242,28 +274,75 @@ namespace Millionaire
 
         private void pictureBoxWalkAway_Click(object sender, EventArgs e)
         {
-            string message = "Walking away? You won $" + CurrentWinnings;
+            string message = "Walking away? the correct answer was \"" + ques.Questions[level].CorrectAnswer + "\" You won $" + CurrentWinnings;
             MessageBox.Show(message);
             Application.Restart();
         }
 
         private void pictureBox5050_Click(object sender, EventArgs e)
         {
-            pictureBox5050.Image = Millionaire.Properties.Resources._50_50_used;
-            /*int count = 2;
-            Label Q1, Q2, Q3, Q4;
-
-            Q1 = ref labelA;
-            Q2 = ref labelB;
-            Q3 = ref labelC;
-            Q4 = ref labelD.Visible;
-            
-            while (count > 0)
+            if (fiftyfifty)
             {
+                pictureBox5050.Image = Millionaire.Properties.Resources._50_50_used;
+                fiftyfifty = false;
+                int count = 2;
+                int position = 0;
 
-            }*/
-            labelB.Visible = false;
-            labelC.Visible = false;
+                Label Q1 = labelA;
+                Label Q2 = labelB;
+                Label Q3 = labelC;
+                Label Q4 = labelD;
+                Label[] quesArr = { Q1, Q2, Q3, Q4 };
+                //randomize the labels
+                Shuffle<Label>(quesArr);
+                while (count > 0)
+                {
+                    //if the question is not the correct answer and it is visible then consider it
+                    //ternary operator
+                    bool candidate5050 = quesArr[position].Text != ques.Questions[level].CorrectAnswer && quesArr[position].Visible ? true : false;
+
+                    if (candidate5050)
+                    {
+                        quesArr[position].Visible = false;
+                        //decrement the count of answers removed
+                        count--;
+                    }
+                    //increment the position
+                    position++;
+                }
+
+            }
+
+        }
+
+        private void buttonInstruction_Click(object sender, EventArgs e)
+        {
+            string info = "There are 15 rounds and three “safe havens.” Round 1, 5, and 10 are safe havens. \n\n" +
+                    "In each round, a question is revealed with four choices, A-D.\n\n" +
+                    "The contestant clicks an answer.\n\n" +
+                    "After an answer is clicked, the game will indicate whether the answer is incorrect or correct.\n\n" +
+                    "If the answer is correct, the game will reveal the answer in the appropriate label and highlight the dollar amount one.\n\n" +
+                    "If the contestant gets the answer correct, the contestant goes on to the next round. \n\n " +
+                    "If a contestant answers all questions correctly, the contestant wins $1 million. \n\n" +
+                    "If an answer is incorrect – the game will be over. \n\n." +
+                    "The contestant will win the guaranteed amount for the last safe haven, for which they answered the question correctly. \n\n" +
+                    "Winning the game: A contestant “wins” by walking away with the dollar amount for the last question answered or when they correctly answer the million dollar questions. \n";
+
+            MessageBox.Show(info);
+        }
+
+        private void pictureBoxPhoneFriend_Click(object sender, EventArgs e)
+        {
+            if (phoneFriend)
+            {
+                phoneFriend = false;
+                pictureBoxPhoneFriend.Image = Millionaire.Properties.Resources.phone_a_friend_used;
+                string[] options = { labelA.Text, labelB.Text, labelC.Text, labelD.Text };
+                Random rand = new Random();
+                int selection = rand.Next(0, 4);
+                MessageBox.Show("Your Friend Says '" + options[selection] + "' is the right answer");
+            }
+
         }
     }
 }

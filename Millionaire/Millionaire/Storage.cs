@@ -41,7 +41,7 @@ namespace Millionaire
                 for (int x = 0; x < 15; x++)
                 {
                     //add the question object to the list
-                    temp[x]= 
+                    temp[x] =
                     new Questions(
                     file.ReadLine(),
                     file.ReadLine(),
@@ -68,6 +68,5 @@ namespace Millionaire
         {
             get { return questions; }
         }
-
     }//storage
 }//Millionaire

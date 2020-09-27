@@ -283,6 +283,16 @@ namespace Millionaire.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap phone_a_friend {
+            get {
+                object obj = ResourceManager.GetObject("phone a friend", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap phone_a_friend_used {
             get {
                 object obj = ResourceManager.GetObject("phone a friend used", resourceCulture);
