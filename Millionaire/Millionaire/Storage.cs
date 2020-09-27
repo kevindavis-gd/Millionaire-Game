@@ -14,7 +14,9 @@ namespace Millionaire
 
     class Storage
     {
-        public List<Questions> questions;
+        bool importError = false;
+
+        Questions[] questions;
         public Storage()
         {
             StoreQuestions();
@@ -34,24 +36,38 @@ namespace Millionaire
                 //Streamer points to the full path of the file
                 StreamReader file = new StreamReader(fileChooser.FileName);
 
-                List<Questions> temp = new List<Questions>();
+                Questions[] temp = new Questions[15];
                 //read till end of file
-                while (file.Peek() > 0)
+                for (int x = 0; x < 15; x++)
                 {
                     //add the question object to the list
-                    temp.Add(
+                    temp[x]= 
                     new Questions(
                     file.ReadLine(),
                     file.ReadLine(),
                     file.ReadLine(),
                     file.ReadLine(),
-                    file.ReadLine()
-                    )
-                    );
+                    file.ReadLine());
                 }//while
                 file.Close();
                 questions = temp;
             }//if
+            else
+            {
+                importError = true;
+                MessageBox.Show("ERROR LOADING QUESTIONS", "ERROR");
+            }
         }//Store Questions
+
+        public bool ImportError
+        {
+            get { return importError; }
+        }
+
+        public Questions[] Questions
+        {
+            get { return questions; }
+        }
+
     }//storage
 }//Millionaire
